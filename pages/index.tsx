@@ -21,10 +21,13 @@ export default function Home() {
         <div className="mt-[100px] md:mt-0">
           <Container>
             <div className="flex gap-[80px]">
-              <div className="flex flex-col gap-[90px] lg:gap-9">
-                <h1 className="text-5xl font-bold">
+              <div className="flex flex-col items-center gap-[90px] lg:gap-9">
+                <h1 className="text-5xl font-bold max-w-[600px]">
                   {homePage.title[0]}{" "}
-                  <span className="text-red-600 text-6xl">Muslim</span> I am a{" "}
+                  <span className="text-red-600 text-5xl md:text-6xl">
+                    Muslim
+                  </span>{" "}
+                  I am a{" "}
                   <span
                     style={{ fontFamily: "Dancing Script" }}
                     className="text-6xl"
@@ -33,7 +36,7 @@ export default function Home() {
                   </span>{" "}
                   and a film maker
                 </h1>
-                <div className="flex flex-col gap-6 text-gray-500">
+                <div className="flex flex-col gap-6 text-gray-500 max-w-[600px]">
                   {homePage.paragraphs.map((e, i) => {
                     return (
                       <p key={i} className="leading-7">

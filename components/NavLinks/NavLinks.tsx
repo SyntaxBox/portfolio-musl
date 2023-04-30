@@ -17,7 +17,7 @@ function NavLinks({
         onClick={() => setShow(!show)}
       />
       <div
-        style={{ transform: `${show ? "scaleY(0)" : "scaleY(1)"}` }}
+        style={{ transform: `${show ? "scaleY(1)" : "scaleY(0)"}` }}
         className="fixed left-0 top-[80px] w-screen flex flex-col items-center transition-all duration-300 ease-in-out origin-top bg-white dark:bg-zinc-900 "
       >
         {navButtons.map((e, i) => {

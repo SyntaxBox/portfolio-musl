@@ -14,7 +14,7 @@ function Card({
 }) {
   return (
     <div className=" flex flex-col lg:flex-row items-center rounded-lg bg-zinc-50 dark:bg-zinc-800 border-2 border-gray-700 gap-5 p-4 transition-all duration-300 ease-in-out hover:scale-105">
-      <div className="w-[360px] flex flex-col gap-3 items-center justify-center dark:text-gray-200">
+      <div className="lg:w-[360px] flex flex-col gap-3 items-center justify-center dark:text-gray-200">
         <Icon className="text-5xl" />
         <p className="text-xl font-bold text-center">{title}</p>
       </div>
