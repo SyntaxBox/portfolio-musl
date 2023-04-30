@@ -17,9 +17,10 @@ function Formation() {
       </Head>
       <main className="flex items-center justify-between flex-col min-h-screen">
         <Navbar active={5} />
+        <span className="h-[100px] md:hidden"></span>
         <h1 className="text-6xl font-bold">Formations</h1>
         <Container>
-          <div className="grid grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <FormationCard
               href="#"
               Icon={CameraReels}

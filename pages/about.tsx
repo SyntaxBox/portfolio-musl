@@ -20,10 +20,12 @@ function About() {
       </Head>
       <main className=" w-screen overflow-x-hidden">
         <Navbar active={1} />
-        <div className="w-full flex items-center justify-center flex-col">
+        <div className="w-full flex items-center justify-center flex-col mt-[100px] md:mt-0">
           <Container>
             <div className="flex flex-col gap-5 mt-5 w-full">
-              <h1 className="text-5xl font-bold max-w-[700px] ">{title}</h1>
+              <h1 className="text-4xl md:text-5xl font-bold max-w-[700px] ">
+                {title}
+              </h1>
               <p className="max-w-[700px] text-gray-600">{p}</p>
             </div>
           </Container>

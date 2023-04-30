@@ -15,42 +15,45 @@ function Services() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className=" w-screen overflow-x-hidden">
+      <main className="w-screen overflow-x-hidden">
         <Navbar active={3} />
         <Container>
+          <span className="h-[80px] md:hidden"></span>
           <h1 className="text-6xl font-bold">Hire Me!</h1>
-          <Card
-            Icon={CameraReels}
-            title={"Video Editing"}
-            p={
-              "Now we can create our first component. Because we are creating a library, we are going to create index files for each tier, and export our components from each one to make it as easy as possible for the people using our library to import them."
-            }
-            exp={3}
-          />
-          <Card
-            Icon={Camera}
-            title={"Photographic"}
-            p={
-              "Now we can create our first component. Because we are creating a library, we are going to create index files for each tier, and export our components from each one to make it as easy as possible for the people using our library to import them."
-            }
-            exp={3}
-          />
-          <Card
-            Icon={Brush}
-            title={"Design"}
-            p={
-              "Now we can create our first component. Because we are creating a library, we are going to create index files for each tier, and export our components from each one to make it as easy as possible for the people using our library to import them."
-            }
-            exp={3}
-          />
-          <Card
-            Icon={Image}
-            title={"Infographic"}
-            p={
-              "Now we can create our first component. Because we are creating a library, we are going to create index files for each tier, and export our components from each one to make it as easy as possible for the people using our library to import them."
-            }
-            exp={3}
-          />
+          <div className="p-4 lg:p-0 flex flex-col gap-3">
+            <Card
+              Icon={CameraReels}
+              title={"Video Editing"}
+              p={
+                "Now we can create our first component. Because we are creating a library, we are going to create index files for each tier, and export our components from each one to make it as easy as possible for the people using our library to import them."
+              }
+              exp={3}
+            />
+            <Card
+              Icon={Camera}
+              title={"Photographic"}
+              p={
+                "Now we can create our first component. Because we are creating a library, we are going to create index files for each tier, and export our components from each one to make it as easy as possible for the people using our library to import them."
+              }
+              exp={3}
+            />
+            <Card
+              Icon={Brush}
+              title={"Design"}
+              p={
+                "Now we can create our first component. Because we are creating a library, we are going to create index files for each tier, and export our components from each one to make it as easy as possible for the people using our library to import them."
+              }
+              exp={3}
+            />
+            <Card
+              Icon={Image}
+              title={"Infographic"}
+              p={
+                "Now we can create our first component. Because we are creating a library, we are going to create index files for each tier, and export our components from each one to make it as easy as possible for the people using our library to import them."
+              }
+              exp={3}
+            />
+          </div>
         </Container>
         <Footer />
       </main>

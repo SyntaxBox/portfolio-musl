@@ -19,10 +19,12 @@ function Projects() {
       </Head>
       <main className=" w-screen overflow-x-hidden">
         <Navbar active={2} />
-        <Container>
-          <h1 className="text-6xl font-bold">Gallery</h1>
-          <Gallery gallery={gallery} />
-        </Container>
+        <div className="mt-[100px] md:mt-0">
+          <Container>
+            <h1 className="text-6xl font-bold">Gallery</h1>
+            <Gallery gallery={gallery} />
+          </Container>
+        </div>
         <Footer />
       </main>
     </>

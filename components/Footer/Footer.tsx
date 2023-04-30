@@ -9,8 +9,8 @@ function Footer() {
   return (
     <div className="w-full border-t py-5">
       <Container>
-        <div className="flex items-center justify-between w-full">
-          <div className="flex gap-6">
+        <div className="flex flex-col lg:flex-row gap-4 items-center justify-between w-full">
+          <div className="grid grid-cols-3 md:grid-cols-6  gap-6">
             {navButtons.map((e, i) => {
               return (
                 <Link
