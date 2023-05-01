@@ -27,14 +27,14 @@ function Gallery({ gallery }: { gallery: string[] }) {
           })}
         </div>
       </div>
-      <div className="lg:hidden w-full flex flex-col md:flex-row gap-3">
-        <div className="w-full flex flex-col gap-3">
+      <div className="lg:hidden w-full flex flex-col md:flex-row gap-3 max-w-[800px]">
+        <div className="w-full flex flex-col gap-3 max-w-[600px] mx-auto">
           {gallery.map((e, i) => {
             if (i >= 6) return null;
             else return <GalleryImage src={e} />;
           })}
         </div>
-        <div className="w-full flex flex-col gap-3">
+        <div className="w-full flex flex-col gap-3 max-w-[600px] mx-auto">
           {gallery.map((e, i) => {
             if (i < 6) return null;
             else return <GalleryImage src={e} />;
