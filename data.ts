@@ -1,6 +1,6 @@
 
 const data = {
-  name: "Badr Mdn",
+  name: "Musleme",
   navButtons: ["home", "about", "projects", "services", "contact", "formation"],
   ProfileImage: "/pro.png",
   homePage: {
