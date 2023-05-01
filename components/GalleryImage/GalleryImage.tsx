@@ -19,7 +19,7 @@ function GalleryImage({ src }: { src: string }) {
         alt="gallery"
         width={400}
         height={400}
-        className="w-full gallery-img transition-all duration-300 hover:scale-105"
+        className="w-full gallery-img transition-all duration-300"
       />
     </div>
   );
