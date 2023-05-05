@@ -6,8 +6,7 @@ import React from "react";
 
 import data from "@/data";
 import Gallery from "@/components/Gallery/Gallery";
-const { projects } = data;
-const { gallery } = projects;
+const { gallery } = data;
 function Projects() {
   return (
     <>

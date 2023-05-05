@@ -28,7 +28,7 @@ function Navbar({ active }: { active: number }) {
               {navButtons.map((e, i) => {
                 return (
                   <Link
-                    href={e === "home" ? "/" : e}
+                    href={e === "home" ? "/" : `/${e}`}
                     key={i}
                     className={`${
                       i === active && "text-red-600 active-button relative"
