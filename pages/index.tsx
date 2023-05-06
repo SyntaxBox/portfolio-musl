@@ -25,7 +25,7 @@ export default function Home() {
                 <h1 className="text-5xl font-bold max-w-[600px]">
                   {homePage.title[0]}{" "}
                   <span className="text-red-600 text-5xl md:text-6xl">
-                    Muslim
+                    Musleme
                   </span>{" "}
                   I am a{" "}
                   <span
