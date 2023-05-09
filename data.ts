@@ -30,7 +30,7 @@ const data = {
       twitter: "#",
       youtube: "#",
     },
-    email: "badr.mdn@gmail.com",
+    email: "musleme@kosei.dz",
   }
 
 }

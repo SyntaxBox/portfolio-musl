@@ -5,6 +5,7 @@ import data from "@/data";
 import Container from "@/UI/layout/Container";
 import Image from "next/image";
 import Footer from "@/components/Footer/Footer";
+import Tilt from "react-parallax-tilt";
 
 const { aboutPage } = data;
 const { title, p, images } = aboutPage;
@@ -41,13 +42,15 @@ function About() {
                     style={{ transform: `rotate(${deg}deg)` }}
                     className="w-[240px] md:w-[300px]"
                   >
-                    <Image
-                      src={image}
-                      alt="project image"
-                      width={300}
-                      height={340}
-                      className={`w-[240px] h-[240px] md:w-[300px] md:h-[340px] rounded-[24px] hover:scale-[1.09] transition-all duration-300`}
-                    />
+                    <Tilt>
+                      <Image
+                        src={image}
+                        alt="project image"
+                        width={300}
+                        height={340}
+                        className={`w-[240px] h-[240px] md:w-[300px] md:h-[340px] rounded-[24px] hover:scale-[1.09] transition-all duration-300`}
+                      />
+                    </Tilt>
                   </div>
                 );
               })}

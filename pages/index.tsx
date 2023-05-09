@@ -4,6 +4,7 @@ import Head from "next/head";
 import data from "@/data";
 import Image from "next/image";
 import Footer from "@/components/Footer/Footer";
+import Tilt from "react-parallax-tilt";
 
 const { homePage } = data;
 
@@ -46,13 +47,17 @@ export default function Home() {
                   })}
                 </div>
               </div>
-              <Image
-                src={homePage.image}
-                alt="profile image"
-                width={380}
-                height={380}
-                className="bg-contain rounded-[16px] rotate-[3deg] h-[380px] w-[380px] hidden lg:block"
-              />
+              <div className="relative min-h-full">
+                <Tilt className="md:sticky top-[30px] right-0">
+                  <Image
+                    src={homePage.image}
+                    alt="profile image"
+                    width={380}
+                    height={380}
+                    className="bg-contain rounded-[16px] rotate-[3deg] h-[380px] w-[380px] hidden lg:block"
+                  />
+                </Tilt>
+              </div>
             </div>
           </Container>
         </div>
