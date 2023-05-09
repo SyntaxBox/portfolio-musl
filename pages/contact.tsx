@@ -6,6 +6,7 @@ import Image from "next/image";
 import React from "react";
 import data from "@/data";
 import SocialLink from "@/components/SocialLink/SocialLink";
+import Tilt from "react-parallax-tilt";
 import {
   Behance,
   EnvelopeFill,
@@ -31,13 +32,15 @@ function Contact() {
         <span className="h-[100px] md:hidden"></span>
         <Container>
           <div className="flex flex-col md:flex-row gap-[80px] items-center w-full">
-            <Image
-              src={image}
-              alt="profile image"
-              width={380}
-              height={380}
-              className="w-[300px] h-[300px] bg-contain rounded-[16px] rotate-[3deg] md:h-[380px] md:w-[380px]"
-            />
+            <Tilt>
+              <Image
+                src={image}
+                alt="profile image"
+                width={380}
+                height={380}
+                className="w-[300px] h-[300px] bg-contain rounded-[16px] rotate-[3deg] md:h-[380px] md:w-[380px]"
+              />
+            </Tilt>
             <div className="flex flex-col justify-between h-full gap-6">
               <SocialLink
                 Icon={Facebook}
