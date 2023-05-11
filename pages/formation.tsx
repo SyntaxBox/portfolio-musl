@@ -26,7 +26,7 @@ function Formation() {
               Icon={CameraReels}
               title={"VideoEditing"}
               p={
-                "Now we can create our first component. Because we are creating a library, we are going to create."
+                "Now helpo can create our first component. Because we are creating a library, we are going to create."
               }
             />
             <FormationCard
