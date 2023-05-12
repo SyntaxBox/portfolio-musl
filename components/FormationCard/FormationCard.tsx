@@ -14,7 +14,7 @@ function FormationCard({
 }) {
   return (
     <Tilt>
-      <div className="formation flex flex-col items-center justify-center rounded-lg bg-zinc-50 dark:bg-zinc-800 border-2 border-gray-700 gap-5 p-4 z-0">
+      <div className="formation flex flex-col items-center justify-center rounded-lg bg-zinc-50 dark:bg-zinc-800 border-2 border-gray-700 gap-5 p-4 z-0 h-full">
         <div className="w-[360px] icon flex flex-col gap-3 items-center justify-center dark:text-gray-200">
           <Icon className="text-5xl" />
           <p className="text-xl font-bold text-center">{title}</p>

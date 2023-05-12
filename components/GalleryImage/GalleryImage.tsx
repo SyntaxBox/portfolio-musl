@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import Flippy, { FrontSide, BackSide } from "react-flippy";
-
+import ReactCardFlip from "react-card-flip";
 function GalleryImage({ src, link }: { src: string; link: string }) {
+  const [isFlipped, setIsFlipped] = useState(false);
   return (
-    <Flippy flipOnHover={true}>
-      <FrontSide style={{ padding: 0, height: "fit-content" }}>
+    <div
+      onMouseEnter={() => setIsFlipped(true)}
+      onMouseLeave={() => setIsFlipped(false)}
+    >
+      <ReactCardFlip isFlipped={isFlipped}>
         <div className="relative overflow-hidden lg:h-fit lg:w-fit">
           <Image
             src={src}
@@ -16,8 +19,6 @@ function GalleryImage({ src, link }: { src: string; link: string }) {
             className="w-full gallery-img transition-all duration-300"
           />
         </div>
-      </FrontSide>
-      <BackSide style={{ padding: 0, height: "fit-content" }}>
         <div className="relative overflow-hidden lg:h-fit lg:w-fit">
           <span className="text-img absolute w-full h-full bg-[#00000074] z-10 px-2 py-4 text-white">
             <p className="sm:text-xl lg:text-base">
@@ -39,8 +40,8 @@ function GalleryImage({ src, link }: { src: string; link: string }) {
             className="w-full gallery-img transition-all duration-300 filter grayscale"
           />
         </div>
-      </BackSide>
-    </Flippy>
+      </ReactCardFlip>
+    </div>
   );
 }
 
