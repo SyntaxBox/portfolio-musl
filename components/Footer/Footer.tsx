@@ -16,7 +16,7 @@ function Footer() {
                 <Link
                   href={e === "home" ? "/" : e}
                   key={i}
-                  className="capitalize"
+                  className="capitalize hover:text-red-500 transition-colors"
                 >
                   {e}
                 </Link>
