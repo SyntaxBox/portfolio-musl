@@ -8,7 +8,7 @@ import Gallery from "@/components/Gallery/Gallery";
 const { gallery } = data;
 function Page() {
   return (
-    <main className="w-screen">
+    <main>
       <Navbar active={2} />
       <div className="mt-[100px] md:mt-0">
         <Container>
