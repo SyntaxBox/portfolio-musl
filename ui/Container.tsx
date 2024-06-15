@@ -1,12 +1,7 @@
-import { ReactNode } from "react";
-
-function Container({
+export function Container({
   children,
   ...other
-}: {
-  children: ReactNode;
-  other?: any;
-}) {
+}: JSX.IntrinsicElements["div"]) {
   return (
     <section className="px-4 sm:px-4 py-2.5 rounded z-1 h-full w-full">
       <div
@@ -18,5 +13,3 @@ function Container({
     </section>
   );
 }
-
-export default Container;
