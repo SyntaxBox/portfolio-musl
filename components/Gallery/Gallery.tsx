@@ -1,42 +1,42 @@
 import React from "react";
 import GalleryImage from "../GalleryImage/GalleryImage";
+import { StaticImageData } from "next/image";
 
-function Gallery({ gallery }: { gallery: { link: string; url: string }[] }) {
+function Gallery({
+  gallery,
+}: {
+  gallery: { link: string; url: string | StaticImageData }[];
+}) {
+  const perColumn = Math.ceil(gallery.length / 3);
+  const columns = [
+    gallery.slice(0, perColumn),
+    gallery.slice(perColumn, perColumn * 2),
+    gallery.slice(perColumn * 2),
+  ];
+  const perColumnTabledAndMobile = Math.ceil(gallery.length / 2);
+  const columnsTabletAndMobile = [
+    gallery.slice(0, perColumnTabledAndMobile),
+    gallery.slice(perColumnTabledAndMobile, gallery.length),
+  ];
   return (
     <>
-      <div className="hidden lg:flex flex-col lg:flex-row w-full gap-3">
-        <div className="w-full grid gap-3 md:grid-cols-2 lg:grid-cols-1">
-          {gallery.map((e, i) => {
-            if (i >= 4) return null;
-            else return <GalleryImage key={i} src={e.url} link={e.link} />;
-          })}
-        </div>
-        <div className="w-full grid gap-3 md:grid-cols-2 lg:grid-cols-1">
-          {gallery.map((e, i) => {
-            if (i < 4 || i >= 8) return null;
-            else return <GalleryImage key={i} src={e.url} link={e.link} />;
-          })}
-        </div>
-        <div className="w-full grid gap-3 md:grid-cols-2 lg:grid-cols-1">
-          {gallery.map((e, i) => {
-            if (i < 8) return null;
-            else return <GalleryImage key={i} src={e.url} link={e.link} />;
-          })}
-        </div>
+      <div className="hidden lg:flex w-full gap-3">
+        {columns.map((column, i) => (
+          <div key={i} className="w-full flex flex-col gap-3 justify-between">
+            {column.map((e, j) => (
+              <GalleryImage key={j} src={e.url} link={e.link} />
+            ))}
+          </div>
+        ))}
       </div>
-      <div className="lg:hidden w-full flex flex-col md:flex-row gap-3 max-w-[800px]">
-        <div className="w-full flex flex-col gap-3 max-w-[600px] mx-auto">
-          {gallery.map((e, i) => {
-            if (i >= 6) return null;
-            else return <GalleryImage key={i} src={e.url} link={e.link} />;
-          })}
-        </div>
-        <div className="w-full flex flex-col gap-3 max-w-[600px] mx-auto">
-          {gallery.map((e, i) => {
-            if (i < 6) return null;
-            else return <GalleryImage key={i} src={e.url} link={e.link} />;
-          })}
-        </div>
+      <div className="lg:hidden flex flex-col md:flex-row w-full gap-3">
+        {columnsTabletAndMobile.map((column, i) => (
+          <div key={i} className="w-full flex flex-col gap-3">
+            {column.map((e, j) => (
+              <GalleryImage key={j} src={e.url} link={e.link} />
+            ))}
+          </div>
+        ))}
       </div>
     </>
   );

@@ -1,4 +1,4 @@
-import Container from "@/UI/layout/Container";
+import { Container } from "@/ui";
 import React from "react";
 import data from "@/data";
 import Link from "next/link";
@@ -16,7 +16,7 @@ function Footer() {
                 <Link
                   href={e === "home" ? "/" : e}
                   key={i}
-                  className="capitalize"
+                  className="capitalize hover:text-red-500 transition-colors"
                 >
                   {e}
                 </Link>

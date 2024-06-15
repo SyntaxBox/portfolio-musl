@@ -1,0 +1,4 @@
+.social:hover p,
+.social:hover svg {
+  color: #dc2626;
+}
