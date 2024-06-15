@@ -9,26 +9,26 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@types/node": "18.15.0",
-    "@types/react": "18.0.28",
-    "@types/react-dom": "18.0.11",
-    "eslint": "8.35.0",
-    "eslint-config-next": "13.2.3",
-    "next": "13.2.3",
-    "next-themes": "^0.2.1",
-    "react": "18.2.0",
-    "react-bootstrap-icons": "^1.10.2",
-    "react-dom": "18.2.0",
+    "next": "14.2.4",
+    "next-themes": "^0.3.0",
+    "react": "^18",
+    "react-bootstrap-icons": "^1.11.4",
+    "react-card-flip": "^1.2.3",
+    "react-dom": "^18",
     "react-feather": "^2.0.10",
-    "react-flippy": "^1.1.0",
-    "react-parallax-tilt": "^1.7.137",
+    "react-parallax-tilt": "^1.7.228",
     "react-toggle-dark-mode": "^1.1.1",
-    "swiper": "^9.2.4",
-    "typescript": "4.9.5"
+    "sharp": "^0.33.4",
+    "swiper": "^11.1.4"
   },
   "devDependencies": {
-    "autoprefixer": "^10.4.14",
-    "postcss": "^8.4.21",
-    "tailwindcss": "^3.2.7"
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.4",
+    "postcss": "^8",
+    "tailwindcss": "^3.4.1",
+    "typescript": "^5"
   }
 }
