@@ -1,5 +1,6 @@
 import React from "react";
 import { Icon } from "react-bootstrap-icons";
+import "./styles.css";
 
 function SocialLink({
   Icon,
