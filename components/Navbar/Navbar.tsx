@@ -5,6 +5,7 @@ import DarkModeButton from "../DarkMode/DarkMode";
 import Link from "next/link";
 import Image from "next/image";
 import NavLinks from "../NavLinks/NavLinks";
+import { Github } from "react-bootstrap-icons";
 
 const { navButtons, ProfileImage } = data;
 
@@ -42,6 +43,12 @@ function Navbar({ active }: { active: number }) {
           </div>
           <div className="flex gap-3 items-center z-30">
             <DarkModeButton />
+            <Link
+              href="https://github.com/cargopip/portfolio-musl"
+              className="hover:text-red-500 transition-all"
+            >
+              <Github size={22} />
+            </Link>
             <NavLinks navButtons={navButtons} active={active} />
           </div>
         </nav>
